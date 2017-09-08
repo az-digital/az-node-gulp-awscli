@@ -1,7 +1,9 @@
-FROM node:7.8.0
-RUN apt-get update && apt-get install python-dev -y
-RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
-    python get-pip.py && \
-    pip install awscli && \
-    npm i gulp -g
+FROM node:8.4.0-stretch
 
+RUN apt-get update \
+  && apt-get install -y \
+    python-dev \
+    python-pip \
+  && rm -rf /var/lib/apt/lists/* \
+  && pip install 'awscli~=1.11.83' \
+  && npm i gulp@'~3.9.1' -g
