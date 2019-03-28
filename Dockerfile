@@ -6,5 +6,5 @@ RUN apt-get update \
     python-pip \
     jq \
   && rm -rf /var/lib/apt/lists/* \
-  && pip install 'awscli~=1.16.124' \
-  && yarn global add gulp@'3.9.1'
+  && pip install 'awscli~=1.16.133' \
+  && yarn global add gulp@'4.0.0'
