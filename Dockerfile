@@ -1,4 +1,4 @@
-FROM node:10.15.3-stretch
+FROM node:12.6.0-buster
 
 RUN apt-get update \
   && apt-get install -y \
@@ -6,5 +6,5 @@ RUN apt-get update \
     python-pip \
     jq \
   && rm -rf /var/lib/apt/lists/* \
-  && pip install 'awscli~=1.16.133' \
+  && pip install 'awscli~=1.16.205' \
   && yarn global add gulp@'4.0.0'
